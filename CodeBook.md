@@ -1,13 +1,7 @@
 ## Identification Fields
 
 * `subject` - The participant ("subject") ID. Values: 1-30.
-* `activity` - The label of the activity performed when the corresponding measurements were taken:
-###1. `WALKING`
-###2. `WALKING_UPSTAIRS`
-###3. `WALKING_DOWNSTAIRS`
-###4. `SITTING`
-###5. `STANDING`
-###6. `LAYING`
+* `activity` - The label of the activity performed when the corresponding measurements were taken: (1) `WALKING`, (2) `WALKING_UPSTAIRS`, (3) `WALKING_DOWNSTAIRS`, (4) `SITTING`, (5) `STANDING`, (6) `LAYING`.
 * `run`: test or train.
 
 ## Features in tidy data set:
