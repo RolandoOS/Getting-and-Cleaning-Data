@@ -6,7 +6,6 @@ print("Loading libraries: dplyr, tidyr...")
 
 library(dplyr)
 library(tidyr)
-# library(data.table)
 
 # 0. Download and extract data.
 
