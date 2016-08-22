@@ -38,6 +38,8 @@ Using the dyplr `mutate()` method along with `replace()`, we change the numeric 
 
 We assign more descriptive names to the features of the data set using `gsub()`. We also remove the parenthesis from the names, as they were interfering with the later `mean()` operations.
 
+We also sort the data frame by subject and activity using the `arrange()` method.
+
 This final tidy data frame is saved into the file "Tidy_Data.txt”.
 
 ## 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
