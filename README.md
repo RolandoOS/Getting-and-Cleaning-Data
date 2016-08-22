@@ -15,7 +15,7 @@ When "run_analysis.R" is sourced, it will automatically download and uncompress 
 
 The script will print to the screen a description of the present working task.
 
-The "run_analysis.R" script uses the `dplyr` and `tidyr` libraries almost exclusively to process and tidy the data.
+The "run_analysis.R" script uses the `dplyr` library almost exclusively to process and tidy the data.
 
 ## Output
 
