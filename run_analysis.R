@@ -21,7 +21,7 @@ download.file(url, f)
 
 unzip("Dataset.zip")
 
-# 1. Merges the training and the test sets to create one data set. ----
+# 1. Merge the training and the test sets to create one data set. ----
 
 print("Extracting Data...")
 
@@ -58,13 +58,13 @@ print("Removing duplicate variables.")
 
 Data_1 <- Data_0[ , !duplicated(colnames(Data_0))]
 
-# 2. Extracts only the measurements on the mean and standard deviation for each measurement. ----
+# 2. Extract only the measurements on the mean and standard deviation for each measurement. ----
 
 print("Extracting mean and standard deviation of measurements.")
 
 Data_1 <- Data_1 %>% select(subject, activity, run, contains("mean()") , contains("std()"))
 
-# 3. Uses descriptive activity names to name the activities in the data set. ----
+# 3. Use descriptive activity names to name the activities in the data set. ----
 
 # 1 WALKING
 # 2 WALKING_UPSTAIRS
@@ -82,7 +82,7 @@ Data_1 <- Data_1 %>% mutate(activity = replace(activity, activity==1, "WALKING")
   mutate(activity = replace(activity, activity==5, "STANDING")) %>%
   mutate(activity = replace(activity, activity==6, "LAYING"))
 
-# 4. Appropriately labels the data set with descriptive variable names. ----
+# 4. Appropriately label the data set with descriptive variable names. ----
 
 print("Assigning descriptive feature names.")
 
@@ -98,7 +98,7 @@ names(Data_1) <- gsub("std\\(\\)", "SD", names(Data_1))
 print("Writing tidy Dataset Output: Tidy_Data_1.txt")
 write.table(Data_1, file = "./Tidy_Data.txt", row.names = FALSE)
 
-# 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject. ----
+# 5. From the data set in step 4, create a second, independent tidy data set with the average of each variable for each activity and each subject. ----
 
 Data_2 <- Data_1 %>% group_by(subject, activity) %>% select(subject, activity, contains("MEAN"))  %>%
   summarise_each(funs(mean(., na.rm = TRUE)))
