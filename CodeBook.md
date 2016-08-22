@@ -6,72 +6,72 @@
 
 ## Features in tidy data set:
 
-*`Time-BodyAccelerometer-MEAN-X`
-*`Time-BodyAccelerometer-MEAN-Y`
-*`Time-BodyAccelerometer-MEAN-Z`
-*`Time-GravityAccelerometer-MEAN-X`
-*`Time-GravityAccelerometer-MEAN-Y`
-*`Time-GravityAccelerometer-MEAN-Z`
-*`Time-BodyAccelerometerJerk-MEAN-X`
-*`Time-BodyAccelerometerJerk-MEAN-Y`
-*`Time-BodyAccelerometerJerk-MEAN-Z`
-*`Time-BodyGyroscope-MEAN-X`
-*`Time-BodyGyroscope-MEAN-Y`
-*`Time-BodyGyroscope-MEAN-Z`
-*`Time-BodyGyroscopeJerk-MEAN-X`
-*`Time-BodyGyroscopeJerk-MEAN-Y`
-*`Time-BodyGyroscopeJerk-MEAN-Z`
-*`Time-BodyAccelerometerMagnitude-MEAN`
-*`Time-GravityAccelerometerMagnitude-MEAN`
-*`Time-BodyAccelerometerJerkMagnitude-MEAN`
-*`Time-BodyGyroscopeMagnitude-MEAN`
-*`Time-BodyGyroscopeJerkMagnitude-MEAN`
-*`Frequency-BodyAccelerometer-MEAN-X`
-*`Frequency-BodyAccelerometer-MEAN-Y`
-*`Frequency-BodyAccelerometer-MEAN-Z`
-*`Frequency-BodyAccelerometerJerk-MEAN-X`
-*`Frequency-BodyAccelerometerJerk-MEAN-Y`
-*`Frequency-BodyAccelerometerJerk-MEAN-Z`
-*`Frequency-BodyGyroscope-MEAN-X`
-*`Frequency-BodyGyroscope-MEAN-Y`
-*`Frequency-BodyGyroscope-MEAN-Z`
-*`Frequency-BodyAccelerometerMagnitude-MEAN`
-*`Frequency-BodyBodyAccelerometerJerkMagnitude-MEAN`
-*`Frequency-BodyBodyGyroscopeMagnitude-MEAN`
-*`Frequency-BodyBodyGyroscopeJerkMagnitude-MEAN`
-*`Time-BodyAccelerometer-SD-X`
-*`Time-BodyAccelerometer-SD-Y`
-*`Time-BodyAccelerometer-SD-Z`
-*`Time-GravityAccelerometer-SD-X`
-*`Time-GravityAccelerometer-SD-Y`
-*`Time-GravityAccelerometer-SD-Z`
-*`Time-BodyAccelerometerJerk-SD-X`
-*`Time-BodyAccelerometerJerk-SD-Y`
-*`Time-BodyAccelerometerJerk-SD-Z`
-*`Time-BodyGyroscope-SD-X`
-*`Time-BodyGyroscope-SD-Y`
-*`Time-BodyGyroscope-SD-Z`
-*`Time-BodyGyroscopeJerk-SD-X`
-*`Time-BodyGyroscopeJerk-SD-Y`
-*`Time-BodyGyroscopeJerk-SD-Z`
-*`Time-BodyAccelerometerMagnitude-SD`
-*`Time-GravityAccelerometerMagnitude-SD`
-*`Time-BodyAccelerometerJerkMagnitude-SD`
-*`Time-BodyGyroscopeMagnitude-SD`
-*`Time-BodyGyroscopeJerkMagnitude-SD`
-*`Frequency-BodyAccelerometer-SD-X`
-*`Frequency-BodyAccelerometer-SD-Y`
-*`Frequency-BodyAccelerometer-SD-Z`
-*`Frequency-BodyAccelerometerJerk-SD-X`
-*`Frequency-BodyAccelerometerJerk-SD-Y`
-*`Frequency-BodyAccelerometerJerk-SD-Z`
-*`Frequency-BodyGyroscope-SD-X`
-*`Frequency-BodyGyroscope-SD-Y`
-*`Frequency-BodyGyroscope-SD-Z`
-*`Frequency-BodyAccelerometerMagnitude-SD`
-*`Frequency-BodyBodyAccelerometerJerkMagnitude-SD`
-*`Frequency-BodyBodyGyroscopeMagnitude-SD`
-*`Frequency-BodyBodyGyroscopeJerkMagnitude-SD`
+* `Time-BodyAccelerometer-MEAN-X`
+* `Time-BodyAccelerometer-MEAN-Y`
+* `Time-BodyAccelerometer-MEAN-Z`
+* `Time-GravityAccelerometer-MEAN-X`
+* `Time-GravityAccelerometer-MEAN-Y`
+* `Time-GravityAccelerometer-MEAN-Z`
+* `Time-BodyAccelerometerJerk-MEAN-X`
+* `Time-BodyAccelerometerJerk-MEAN-Y`
+* `Time-BodyAccelerometerJerk-MEAN-Z`
+* `Time-BodyGyroscope-MEAN-X`
+* `Time-BodyGyroscope-MEAN-Y`
+* `Time-BodyGyroscope-MEAN-Z`
+* `Time-BodyGyroscopeJerk-MEAN-X`
+* `Time-BodyGyroscopeJerk-MEAN-Y`
+* `Time-BodyGyroscopeJerk-MEAN-Z`
+* `Time-BodyAccelerometerMagnitude-MEAN`
+* `Time-GravityAccelerometerMagnitude-MEAN`
+* `Time-BodyAccelerometerJerkMagnitude-MEAN`
+* `Time-BodyGyroscopeMagnitude-MEAN`
+* `Time-BodyGyroscopeJerkMagnitude-MEAN`
+* `Frequency-BodyAccelerometer-MEAN-X`
+* `Frequency-BodyAccelerometer-MEAN-Y`
+* `Frequency-BodyAccelerometer-MEAN-Z`
+* `Frequency-BodyAccelerometerJerk-MEAN-X`
+* `Frequency-BodyAccelerometerJerk-MEAN-Y`
+* `Frequency-BodyAccelerometerJerk-MEAN-Z`
+* `Frequency-BodyGyroscope-MEAN-X`
+* `Frequency-BodyGyroscope-MEAN-Y`
+* `Frequency-BodyGyroscope-MEAN-Z`
+* `Frequency-BodyAccelerometerMagnitude-MEAN`
+* `Frequency-BodyBodyAccelerometerJerkMagnitude-MEAN`
+* `Frequency-BodyBodyGyroscopeMagnitude-MEAN`
+* `Frequency-BodyBodyGyroscopeJerkMagnitude-MEAN`
+* `Time-BodyAccelerometer-SD-X`
+* `Time-BodyAccelerometer-SD-Y`
+* `Time-BodyAccelerometer-SD-Z`
+* `Time-GravityAccelerometer-SD-X`
+* `Time-GravityAccelerometer-SD-Y`
+* `Time-GravityAccelerometer-SD-Z`
+* `Time-BodyAccelerometerJerk-SD-X`
+* `Time-BodyAccelerometerJerk-SD-Y`
+* `Time-BodyAccelerometerJerk-SD-Z`
+* `Time-BodyGyroscope-SD-X`
+* `Time-BodyGyroscope-SD-Y`
+* `Time-BodyGyroscope-SD-Z`
+* `Time-BodyGyroscopeJerk-SD-X`
+* `Time-BodyGyroscopeJerk-SD-Y`
+* `Time-BodyGyroscopeJerk-SD-Z`
+* `Time-BodyAccelerometerMagnitude-SD`
+* `Time-GravityAccelerometerMagnitude-SD`
+* `Time-BodyAccelerometerJerkMagnitude-SD`
+* `Time-BodyGyroscopeMagnitude-SD`
+* `Time-BodyGyroscopeJerkMagnitude-SD`
+* `Frequency-BodyAccelerometer-SD-X`
+* `Frequency-BodyAccelerometer-SD-Y`
+* `Frequency-BodyAccelerometer-SD-Z`
+* `Frequency-BodyAccelerometerJerk-SD-X`
+* `Frequency-BodyAccelerometerJerk-SD-Y`
+* `Frequency-BodyAccelerometerJerk-SD-Z`
+* `Frequency-BodyGyroscope-SD-X`
+* `Frequency-BodyGyroscope-SD-Y`
+* `Frequency-BodyGyroscope-SD-Z`
+* `Frequency-BodyAccelerometerMagnitude-SD`
+* `Frequency-BodyBodyAccelerometerJerkMagnitude-SD`
+* `Frequency-BodyBodyGyroscopeMagnitude-SD`
+* `Frequency-BodyBodyGyroscopeJerkMagnitude-SD`
 
 ## From the features explanation file:
 
