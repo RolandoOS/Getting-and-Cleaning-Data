@@ -1,49 +1,80 @@
-# Code Book
+## Identification Fields
 
-The "run_analysis.R" script uses the `dplyr` and `tidyr` libraries almost exclusively to process and tidy the data.
+* `subject` - The participant ("subject") ID. Values: 1-30.
+* `activity` - The label of the activity performed when the corresponding measurements were taken:
+** 1. `WALKING`
+** 2. `WALKING_UPSTAIRS`
+** 3. `WALKING_DOWNSTAIRS`
+** 4. `SITTING`
+** 5. `STANDING`
+** 6. `LAYING`
+* `run`: test or train.
 
-## Part 0. Download and extract data
+## Features in tidy data set:
 
-In this section we download the data from:
-
-`https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip`
-
-and it's saved into the file Dataset.zip; it is uncompressed using the unzip method. The test data resides in the `./UCI HAR Dataset/test` directory, the train data in `./UCI HAR Dataset/test`.
-
-## Part 1. Merge the training and the test sets to create one data set.
-
-In this section, using the `read.csv()` we open the files:
-
-* `./UCI HAR Dataset/features.txt`
-* `./UCI HAR Dataset/train/X_train.txt`
-* `./UCI HAR Dataset/test/X_test.txt`
-* `./UCI HAR Dataset/train/subject_train.txt`
-* `./UCI HAR Dataset/test/subject_test.txt`
-* `./UCI HAR Dataset/train/y_train.txt`
-* `./UCI HAR Dataset/test/y_test.txt`
-
-The files are converted into data frame tbl using `tbl_df()` for further manipulation with `dplyr` and `tidyr`. We combine the training and test variables into temporary variables "aux_train" and "aux_test" respectively using `select()` and `mutate()`. We also create a label "test" and "train" to differentiate the types of runs in the final dataset.
-
-We combine the temporary test and train sets using the `bind_rows()` method. We assign the variables the specified names in the `features` variable. We found there are duplicate features; since these features are not mean() or std() we removed the duplicates.
-
-## 2. Extract only the measurements on the mean and standard deviation for each measurement.
-
-We extract the features that have the strings `mean()` and `std()` using the dyplr `contains()` method.
-
-## 3. Use descriptive activity names to name the activities in the data set.
-
-Using the dyplr `mutate()` method along with `replace()`, we change the numeric labels for the activities with the actual names as specified in the "activity_labels.txt" file.
-
-## 4. Appropriately labels the data set with descriptive variable names. 
-
-We assign more descriptive names to the features of the data set using `gsub()`. We also remove the parenthesis from the names, as they were interfering with the later `mean()` operations.
-
-We also sort the data frame by subject and activity using the `arrange()` method.
-
-This final tidy data frame is saved into the file "Tidy_Data.txt”.
-
-## 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-
-Using the `group_by()`, `select()`, and `summarise_each()` methods we calculate the mean of the mean measurements grouped by subject and activity. We do not include the mean of the standard deviation measurements.
-
-This independent tidy data frame is saved into the file "Tidy_Data_summary.txt”.
+"Time-BodyAccelerometer-MEAN-X"
+"Time-BodyAccelerometer-MEAN-Y"
+"Time-BodyAccelerometer-MEAN-Z"
+"Time-GravityAccelerometer-MEAN-X"
+"Time-GravityAccelerometer-MEAN-Y"
+"Time-GravityAccelerometer-MEAN-Z"
+"Time-BodyAccelerometerJerk-MEAN-X"
+"Time-BodyAccelerometerJerk-MEAN-Y"
+"Time-BodyAccelerometerJerk-MEAN-Z"
+"Time-BodyGyroscope-MEAN-X"
+"Time-BodyGyroscope-MEAN-Y"
+"Time-BodyGyroscope-MEAN-Z"
+"Time-BodyGyroscopeJerk-MEAN-X"
+"Time-BodyGyroscopeJerk-MEAN-Y"
+"Time-BodyGyroscopeJerk-MEAN-Z"
+"Time-BodyAccelerometerMagnitude-MEAN"
+"Time-GravityAccelerometerMagnitude-MEAN"
+"Time-BodyAccelerometerJerkMagnitude-MEAN"
+"Time-BodyGyroscopeMagnitude-MEAN"
+"Time-BodyGyroscopeJerkMagnitude-MEAN"
+"Frequency-BodyAccelerometer-MEAN-X"
+"Frequency-BodyAccelerometer-MEAN-Y"
+"Frequency-BodyAccelerometer-MEAN-Z"
+"Frequency-BodyAccelerometerJerk-MEAN-X" 
+"Frequency-BodyAccelerometerJerk-MEAN-Y" 
+"Frequency-BodyAccelerometerJerk-MEAN-Z" 
+"Frequency-BodyGyroscope-MEAN-X" 
+"Frequency-BodyGyroscope-MEAN-Y"
+"Frequency-BodyGyroscope-MEAN-Z" 
+"Frequency-BodyAccelerometerMagnitude-MEAN"
+"Frequency-BodyBodyAccelerometerJerkMagnitude-MEAN" 
+"Frequency-BodyBodyGyroscopeMagnitude-MEAN"
+"Frequency-BodyBodyGyroscopeJerkMagnitude-MEAN" 
+"Time-BodyAccelerometer-SD-X"
+"Time-BodyAccelerometer-SD-Y" 
+"Time-BodyAccelerometer-SD-Z" 
+"Time-GravityAccelerometer-SD-X"
+"Time-GravityAccelerometer-SD-Y"
+"Time-GravityAccelerometer-SD-Z"
+"Time-BodyAccelerometerJerk-SD-X" 
+"Time-BodyAccelerometerJerk-SD-Y"
+"Time-BodyAccelerometerJerk-SD-Z" 
+"Time-BodyGyroscope-SD-X" 
+"Time-BodyGyroscope-SD-Y"
+"Time-BodyGyroscope-SD-Z" 
+"Time-BodyGyroscopeJerk-SD-X"
+"Time-BodyGyroscopeJerk-SD-Y" 
+"Time-BodyGyroscopeJerk-SD-Z" 
+"Time-BodyAccelerometerMagnitude-SD"
+"Time-GravityAccelerometerMagnitude-SD" 
+"Time-BodyAccelerometerJerkMagnitude-SD"
+"Time-BodyGyroscopeMagnitude-SD"
+"Time-BodyGyroscopeJerkMagnitude-SD" 
+"Frequency-BodyAccelerometer-SD-X" 
+"Frequency-BodyAccelerometer-SD-Y"
+"Frequency-BodyAccelerometer-SD-Z" 
+"Frequency-BodyAccelerometerJerk-SD-X" 
+"Frequency-BodyAccelerometerJerk-SD-Y" 
+"Frequency-BodyAccelerometerJerk-SD-Z"
+"Frequency-BodyGyroscope-SD-X"
+"Frequency-BodyGyroscope-SD-Y"
+"Frequency-BodyGyroscope-SD-Z"
+"Frequency-BodyAccelerometerMagnitude-SD"
+"Frequency-BodyBodyAccelerometerJerkMagnitude-SD" 
+"Frequency-BodyBodyGyroscopeMagnitude-SD" 
+"Frequency-BodyBodyGyroscopeJerkMagnitude-SD"
