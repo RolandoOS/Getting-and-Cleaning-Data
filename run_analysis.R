@@ -95,12 +95,14 @@ names(Data_1) <- gsub("^f", "Frequency-", names(Data_1))
 names(Data_1) <- gsub("mean\\(\\)", "MEAN", names(Data_1))
 names(Data_1) <- gsub("std\\(\\)", "SD", names(Data_1))
 
+Data_1 <- arrange(Data_1, subject, activity)
+
 print("Writing tidy Dataset Output: Tidy_Data_1.txt")
 write.table(Data_1, file = "./Tidy_Data.txt", row.names = FALSE)
 
 # 5. From the data set in step 4, create a second, independent tidy data set with the average of each variable for each activity and each subject. ----
 
-Data_2 <- Data_1 %>% group_by(subject, activity) %>% select(subject, activity, contains("MEAN"))  %>%
+Data_2 <- Data_1 %>% group_by(activity, subject) %>% select(activity, subject, contains("MEAN"))  %>%
   summarise_each(funs(mean(., na.rm = TRUE)))
 
 print("Writing summary  tidy Dataset Output: Tidy_Data_1.txt")
